@@ -9,3 +9,13 @@ FROM sales
 GROUP BY customer_id
 ORDER BY monetary DESC
 LIMIT 20;
+
+-- Full RFM base table for all customers (export this for Python scoring)
+SELECT 
+    customer_id,
+    (SELECT MAX(invoice_date) FROM sales) - MAX(invoice_date) AS recency,
+    COUNT(DISTINCT invoice) AS frequency,
+    ROUND(SUM(quantity * price)::numeric, 2) AS monetary
+FROM sales
+GROUP BY customer_id
+ORDER BY customer_id;
