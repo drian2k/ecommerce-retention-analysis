@@ -2,7 +2,6 @@
 
 An end-to-end data analysis project investigating why revenue growth had stalled for a UK-based online gift wholesaler, using SQL, Python, and Power BI to uncover customer retention patterns, segment the customer base, and surface actionable business recommendations.
 
-**[Add your Power BI screenshot or dashboard walkthrough video link here]**
 
 ---
 
